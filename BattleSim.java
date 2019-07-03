@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class BattleSim {
@@ -71,12 +72,7 @@ public class BattleSim {
 		return new int[] {agg-al,def-dl};
 	}
 	public static ArrayList<Integer> sort(ArrayList<Integer> list){
-		list.sort(null);
-		for(int i=0;i<list.size()/2;i++) {
-			int temp = list.get(i);
-			list.set(i,list.get(list.size()-i-1));
-			list.set(list.size()-i-1, temp);
-		}
+		list.sort(Collections.reverseOrder());
 		return list;	
 	}
 	public static int getAgg() {
